@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compatibilidad de Piezas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="componentes.html">Componentes</a></li>
+        <li><a href="compatibilidad.html">Compatibilidad</a></li>
+    </ul>
+</nav>
+
+    <input type="text" id="search" placeholder="Buscar en esta sección..." onkeyup="searchContent()">
+
+    <div class="container">
+        <h1>Compatibilidad de Piezas</h1>
+
+        <div class="compatibility">
+            <h2>Placa Base y Procesador</h2>
+            <p>El socket de la placa base debe coincidir con el del procesador. También verifica la compatibilidad con el chipset.</p>
+        </div>
+
+        <div class="compatibility">
+            <h2>Memoria RAM</h2>
+            <p>Asegúrate de elegir el tipo correcto (DDR4, DDR5) y que su frecuencia esté soportada por la motherboard.</p>
+        </div>
+
+        <div class="compatibility">
+            <h2>Tarjeta Gráfica (GPU)</h2>
+            <p>Verifica que el tamaño encaje en el gabinete y que la fuente de poder tenga los conectores adecuados.</p>
+        </div>
+
+        <div class="compatibility">
+            <h2>Fuente de Poder (PSU)</h2>
+            <p>Debe tener suficiente potencia para soportar los componentes, además de conectores compatibles.</p>
+        </div>
+
+        <div class="compatibility">
+            <h2>Almacenamiento (HDD/SSD)</h2>
+            <p>Revisa los conectores SATA o NVMe para asegurar compatibilidad con la motherboard.</p>
+        </div>
+
+        <div class="compatibility">
+            <h2>Refrigeración</h2>
+            <p>Asegúrate de que el disipador o sistema de enfriamiento sea compatible con el procesador y el gabinete.</p>
+        </div>
+        <div class="compatibility">
+    <h2>Placa Base y Procesador</h2>
+    <button class="expand-btn" onclick="toggleInfo('info1')">Ver más</button>
+    <p id="info1" class="hidden">El socket de la placa base debe coincidir con el del procesador. También verifica la compatibilidad con el chipset.</p>
+</div>
+
+    </div>
+    <script src="script.js"></script>
+    <h2>Simulador de compatibilidad</h2>
+<select id="cpu">
+    <option value="intel">Intel</option>
+    <option value="amd">AMD</option>
+</select>
+<select id="motherboard">
+    <option value="intel">Placa Intel</option>
+    <option value="amd">Placa AMD</option>
+</select>
+<button onclick="checkCompatibility()">Verificar compatibilidad</button>
+<p id="compatibility-result"></p>
+<button onclick="window.location.href='index.html';">Ir a Inicio</button>
+<button onclick="window.location.href='componentes.html';">Ir a Componentes</button>
+
+
+</body>
+</html>
